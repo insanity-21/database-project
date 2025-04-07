@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2025 at 10:33 AM
+-- Generation Time: Apr 05, 2025, at 10:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -65,7 +65,8 @@ INSERT INTO `child` (`child_id`, `name`, `dob`, `mother_id`, `health_records`, `
 (1, 'Hafsa Mohamed', '2021-01-15', 1, 'Normal Birth Weight\r\nMild flu', 'Exclusive Breastfeeding'),
 (2, 'Hamdi Ahmed', '2020-07-25', 2, 'Normal Birth Weight\r\nMild anemia at 3 months (prescribed iron syrup)', 'Breastfed and formula supplement'),
 (3, 'Ibrahim Abdullahi', '2020-07-25', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
-(4, 'Zainab Omar', '2020-07-25', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle');
+(4, 'Zainab Omar', '2020-07-25', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
+(5, 'Salma Hasna', '2021-09-11', 5, 'Normal Birth Weight\r\nMild neonatal jaundice (resolved with phototherapy)', 'Breastfed + formula introduced occasionally') ;
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,7 @@ CREATE TABLE `deliveryrecord` (
 --
 
 INSERT INTO `deliveryrecord` (`delivery_id`, `mother_id`, `delivery_date`, `hospital_id`, `birth_type`) VALUES
-(1, 1, '2024-01-15', 1, 'Normal');
+(1, 1, '2021-01-15', 1, 'Normal');
 
 -- --------------------------------------------------------
 
@@ -126,7 +127,8 @@ CREATE TABLE `healthcarefacility` (
 --
 
 INSERT INTO `healthcarefacility` (`hospital_id`, `name`, `location`, `facility_type`) VALUES
-(1, 'City Hospital', 'Garissa', 'Hospital');
+(1, 'City Hospital', 'Garissa', 'Hospital'),
+(2, 'Mothers joy', 'Nairobi', 'Hospital');
 
 -- --------------------------------------------------------
 
