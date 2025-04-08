@@ -9,7 +9,7 @@
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00";
+SET time_zone = "+00:00"; 
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -79,7 +79,7 @@ CREATE TABLE `deliveryrecord` (
   `mother_id` int(11) DEFAULT NULL,
   `delivery_date` date NOT NULL,
   `hospital_id` int(11) DEFAULT NULL,
-  `birth_type` enum('Normal','C-Section','Other') NOT NULL
+  `birth_type` enum('Normal', 'C-Section', 'Other') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -119,7 +119,7 @@ CREATE TABLE `healthcarefacility` (
   `hospital_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `facility_type` enum('Hospital','Clinic','Health Center') NOT NULL
+  `facility_type` enum('Hospital',' Clinic',' Health Center') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -182,7 +182,8 @@ INSERT INTO `mother` (`mother_id`, `name`, `age`, `contact`, `medical_history`, 
 (1, 'Mariam Amina', 28, '+254-799-879-645', 'Hypertension', 'Good', 1),
 (2, 'Aisha Ali', 29, '+254-798-765-432', 'Diabetes', 'Moderate', 1),
 (3, 'Maryam Hassan', 35, '+254-723-456-789', 'No known conditions', 'Great', 0),
-(4, 'Zulekha Omar', 25, '+254-720-570-231', 'Asthma', 'Good', 1);
+(4, 'Zulekha Omar', 25, '+254-720-570-231', 'Asthma', 'Good', 1),
+(5, 'Zahra Ahmed', 29, '+254-104-375-512', 'Allergies (Mint)' 1);
 
 -- --------------------------------------------------------
 
