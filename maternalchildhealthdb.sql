@@ -128,7 +128,13 @@ CREATE TABLE `healthcarefacility` (
 
 INSERT INTO `healthcarefacility` (`hospital_id`, `name`, `location`, `facility_type`) VALUES
 (1, 'City Hospital', 'Garissa', 'Hospital'),
-(2, 'Mothers joy', 'Nairobi', 'Hospital');
+(2, 'Mothers joy', 'Nairobi', 'Hospital'),
+(3, 'Matter Hospital', 'Nairobi', 'Hospital'),
+(4, 'St John', 'Nyeri', 'Hospital'),
+(5, 'Carance', 'Nakuru', 'Clinic'),
+(6, 'BrightCare', 'Lodwar', 'Clinic'),
+(7, 'Serenity', 'Mombasa', 'Health Center'),
+(8, 'PrimeCare', 'Eldoret', 'Health Center');
 
 -- --------------------------------------------------------
 
