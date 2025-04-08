@@ -66,7 +66,7 @@ INSERT INTO `child` (`child_id`, `name`, `dob`, `mother_id`, `health_records`, `
 (2, 'Hamdi Ahmed', '2020-07-25', 2, 'Normal Birth Weight\r\nMild anemia at 3 months (prescribed iron syrup)', 'Breastfed and formula supplement'),
 (3, 'Ibrahim Abdullahi', '2020-07-25', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
 (4, 'Zainab Omar', '2020-07-25', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
-(5, 'Salma Hasna', '2021-09-11', 5, 'Normal Birth Weight\r\nMild neonatal jaundice (resolved with phototherapy)', 'Breastfed + formula introduced occasionally') ;
+(5, 'Salma Hasna', '2021-09-11', 5, 'Normal Birth Weight\r\nBreech presentation, no neonatal complications', 'Breastfed + formula introduced occasionally') ;
 
 -- --------------------------------------------------------
 
