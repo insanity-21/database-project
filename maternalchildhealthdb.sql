@@ -84,7 +84,7 @@ CREATE TABLE `deliveryrecord` (
   `mother_id` int(11) DEFAULT NULL,
   `delivery_date` date NOT NULL,
   `hospital_id` int(11) DEFAULT NULL,
-  `birth_type` enum('Normal', 'C-Section', 'Other') NOT NULL
+  `birth_type` enum('Normal', 'Caesarean', 'Breech Birth', 'Multiple Birth') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -199,7 +199,7 @@ INSERT INTO `mother` (`mother_id`, `name`, `age`, `contact`, `medical_history`, 
 (2, 'Aisha Ali', 40, '+254-798-765-432', 'Diabetes', 'Moderate', 1),
 (3, 'Maryam Hassan', 19, '+254-723-456-789', 'No known conditions', 'Great', 0),
 (4, 'Zulekha Omar', 25, '+254-720-570-231', 'Asthma', 'Good', 1),
-(5, 'Zahra Ahmed', 31, '+254-104-375-512', 'Allergies (Mint)', 1);
+(5, 'Zahra Ahmed', 31, '+254-104-375-512', 'Allergies (Mint)', 'Good', 1);
 
 -- --------------------------------------------------------
 
