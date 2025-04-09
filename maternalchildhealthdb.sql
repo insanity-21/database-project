@@ -162,8 +162,11 @@ CREATE TABLE `immunization` (
 
 INSERT INTO `immunization` (`immunization_id`, `child_id`, `vaccine_name`, `immunization_date`) VALUES
 (1, 1, 'Hepatitis B', '2021-01-15'),
-(2, 2, 'Polio', '2024-02-01'),
-(3, 3, 'BCG', '2024-02-01');
+(2, 2, 'Polio', '2021-01-01'),
+(3, 3, 'BCG', '2022-02-09'),
+(4, 4, 'Varicela', '2020-12-19'),
+(5, 5, 'Mumps', '2023-04-12'),
+(6, 6, 'Mumps', '2023-04-12');
 
 -- --------------------------------------------------------
 
