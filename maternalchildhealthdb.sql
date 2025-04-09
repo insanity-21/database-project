@@ -67,6 +67,7 @@ INSERT INTO `child` (`child_id`, `name`, `dob`, `mother_id`, `health_records`, `
 (3, 'Ibrahim Abdullahi', '2020-07-25', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
 (4, 'Zainab Omar', '2020-07-25', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
 (5, 'Salma Hasna', '2021-09-11', 5, 'Normal Birth Weight\r\nBreech presentation, no neonatal complications', 'Breastfed + formula introduced occasionally') ;
+(6, 'Siham Shairff', '2022-04-6', 5, 'Normal Birth Weight\r\nBreech presentation, no neonatal complications', 'Breastfed + formula introduced occasionally') ;
 
 -- --------------------------------------------------------
 
@@ -88,6 +89,7 @@ CREATE TABLE `deliveryrecord` (
 
 INSERT INTO `deliveryrecord` (`delivery_id`, `mother_id`, `delivery_date`, `hospital_id`, `birth_type`) VALUES
 (1, 1, '2021-01-15', 1, 'Normal');
+(2, 2, '2023-07-1', 2, 'Premoature');
 
 -- --------------------------------------------------------
 
@@ -135,7 +137,7 @@ INSERT INTO `healthcarefacility` (`hospital_id`, `name`, `location`, `facility_t
 (6, 'BrightCare', 'Lodwar', 'Clinic'),
 (7, 'Serenity', 'Mombasa', 'Health Center'),
 (8, 'PrimeCare', 'Eldoret', 'Health Center');
-
+(9, 'Matter Hospital', 'Nairobi', 'Hospital');
 -- --------------------------------------------------------
 
 --
