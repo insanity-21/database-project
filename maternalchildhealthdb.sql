@@ -64,10 +64,10 @@ CREATE TABLE `child` (
 INSERT INTO `child` (`child_id`, `name`, `dob`, `mother_id`, `health_records`, `nutrition`) VALUES
 (1, 'Hafsa Mohamed', '2021-01-15', 1, 'Normal Birth Weight\r\nMild flu', 'Exclusive Breastfeeding'),
 (2, 'Hamdi Ahmed', '2020-07-25', 2, 'Normal Birth Weight\r\nMild anemia at 3 months (prescribed iron syrup)', 'Breastfed and formula supplement'),
-(3, 'Ibrahim Abdullahi', '2020-07-25', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
-(4, 'Zainab Omar', '2020-07-25', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
-(5, 'Salma Hasna', '2021-09-11', 5, 'Normal Birth Weight\r\nBreech presentation, no neonatal complications', 'Breastfed + formula introduced occasionally') ;
-(6, 'Siham Shairff', '2022-04-6', 5, 'Normal Birth Weight\r\nBreech presentation, no neonatal complications', 'Breastfed + formula introduced occasionally') ;
+(3, 'Ibrahim Abdullahi', '2021-09-15', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
+(4, 'Zainab Omar', '2019-12-19', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
+(5, 'Salma Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed'),
+(6, 'Suleiman Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed') ;
 
 -- --------------------------------------------------------
 
@@ -89,7 +89,10 @@ CREATE TABLE `deliveryrecord` (
 
 INSERT INTO `deliveryrecord` (`delivery_id`, `mother_id`, `delivery_date`, `hospital_id`, `birth_type`) VALUES
 (1, 1, '2021-01-15', 1, 'Normal');
-(2, 2, '2023-07-1', 2, 'Premature');
+(2, 2, '2020-07-25', 2, 'Normal'),
+(3, 3, '2021-09-15', 3, 'Breech Birth'),
+(4, 4, '2019-12-19', 4, 'Caesarean'),
+(5, 5, '2022-02-21', 5, 'Multiple Birth');
 
 -- --------------------------------------------------------
 
@@ -206,7 +209,10 @@ CREATE TABLE `nutrition` (
 --
 
 INSERT INTO `nutrition` (`nutrition_id`, `mother_id`, `record_date`, `dietary_intake`, `supplements`) VALUES
-(1, 1, '2023-12-01', 'Balanced Diet with Folic Acid', 'Iron, Calcium');
+(1, 1, '2020-10-01', 'Breakfast: Millet porridge with groundnuts, banana\r\nLunch: Ugali, sukuma wiki, beef stew\r\nDinner: Rice, lentils, avocado\r\nFluids: 8 glasses water, 1 glass fresh juice', 'Multivitamin with DHA'),
+(2, 2, '2020-04-01', 'Breakfast: Oats with milk, eggs, mango\r\nLunch: Githeri with spinach\r\nDinner: Sweet potatoes, chicken stew\r\nSnacks: Groundnuts, yoghurt', 'Folic acid, Iron, Calcium'),
+(3, 3, '2021-09-15', 'Breakfast: Toast with peanut butter, boiled egg, papaya\r\nLunch: Chapati, lentils, sukuma wiki\r\nDinner: Rice with vegetables and minced meat', 'Vitamin C'),
+(4, 4, '2019-12-19);
 
 --
 -- Indexes for dumped tables
