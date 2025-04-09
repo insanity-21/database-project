@@ -67,7 +67,7 @@ INSERT INTO `child` (`child_id`, `name`, `dob`, `mother_id`, `health_records`, `
 (3, 'Ibrahim Abdullahi', '2021-09-15', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
 (4, 'Zainab Omar', '2019-12-19', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
 (5, 'Salma Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed'),
-(6, 'Suleiman Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed') ;
+(6, 'Suleiman Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed');
 
 -- --------------------------------------------------------
 
@@ -88,7 +88,7 @@ CREATE TABLE `deliveryrecord` (
 --
 
 INSERT INTO `deliveryrecord` (`delivery_id`, `mother_id`, `delivery_date`, `hospital_id`, `birth_type`) VALUES
-(1, 1, '2021-01-15', 1, 'Normal');
+(1, 1, '2021-01-15', 1, 'Normal'),
 (2, 2, '2020-07-25', 2, 'Normal'),
 (3, 3, '2021-09-15', 3, 'Breech Birth'),
 (4, 4, '2019-12-19', 4, 'Caesarean'),
@@ -141,8 +141,8 @@ INSERT INTO `healthcarefacility` (`hospital_id`, `name`, `location`, `facility_t
 (5, 'Carance', 'Nakuru', 'Clinic'),
 (6, 'BrightCare', 'Lodwar', 'Clinic'),
 (7, 'Serenity', 'Mombasa', 'Health Center'),
-(8, 'PrimeCare', 'Eldoret', 'Health Center');
-(9, 'Matter Hospital', 'Nairobi', 'Hospital');
+(8, 'PrimeCare', 'Eldoret', 'Health Center'),
+(9, 'Vital Point Medical', 'Nairobi', 'Hospital');
 -- --------------------------------------------------------
 
 --
@@ -161,7 +161,7 @@ CREATE TABLE `immunization` (
 --
 
 INSERT INTO `immunization` (`immunization_id`, `child_id`, `vaccine_name`, `immunization_date`) VALUES
-(1, 1, 'Hepatitis B', '2024-02-01'),
+(1, 1, 'Hepatitis B', '2021-01-15'),
 (2, 2, 'Polio', '2024-02-01'),
 (3, 3, 'BCG', '2024-02-01');
 
