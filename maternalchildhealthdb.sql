@@ -112,7 +112,9 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`doctor_id`, `name`, `specialization`, `facility_id`) VALUES
-(1, 'Dr. Smith', 'Obstetrician', 1);
+(1, 'Dr. Smith', 'Obstetrician', 1),
+(2, 'Dr. Elizabeth', 'Gynecologist', 2),
+(3, 'Dr. Maxwell', 'Maternal Fetal Medicine Specialist ', 3);
 
 -- --------------------------------------------------------
 
@@ -212,7 +214,8 @@ INSERT INTO `nutrition` (`nutrition_id`, `mother_id`, `record_date`, `dietary_in
 (1, 1, '2020-10-01', 'Breakfast: Millet porridge with groundnuts, banana\r\nLunch: Ugali, sukuma wiki, beef stew\r\nDinner: Rice, lentils, avocado\r\nFluids: 8 glasses water, 1 glass fresh juice', 'Multivitamin with DHA'),
 (2, 2, '2020-04-01', 'Breakfast: Oats with milk, eggs, mango\r\nLunch: Githeri with spinach\r\nDinner: Sweet potatoes, chicken stew\r\nSnacks: Groundnuts, yoghurt', 'Folic acid, Iron, Calcium'),
 (3, 3, '2021-09-15', 'Breakfast: Toast with peanut butter, boiled egg, papaya\r\nLunch: Chapati, lentils, sukuma wiki\r\nDinner: Rice with vegetables and minced meat', 'Vitamin C'),
-(4, 4, '2019-12-19);
+(4, 4, '2019-12-19', 'Breakfast: Tea with milk, maize porridge\r\nLunch: Ugali, liver, pumpkin leaves\r\nDinner: Mashed potatoes with beans', 'Fibre'),
+(5, 5, '2022-02-21', 'Breakfast: Three Scrambled eggs with spinach and mushrooms with Two Whole-grain toast and a Glass of milk\r\nLunch: Grilled chicken salad with mixed greens, cherry tomatoes, avocado, olive oil, and balsamic vinegar dressing\r\nDinner: Grilled salmon\r\nSnacks: Greek yogurt with mixed berries or nuts', 'Vitamin D, Magnesium');
 
 --
 -- Indexes for dumped tables
