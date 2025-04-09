@@ -89,7 +89,7 @@ CREATE TABLE `deliveryrecord` (
 
 INSERT INTO `deliveryrecord` (`delivery_id`, `mother_id`, `delivery_date`, `hospital_id`, `birth_type`) VALUES
 (1, 1, '2021-01-15', 1, 'Normal');
-(2, 2, '2023-07-1', 2, 'Premoature');
+(2, 2, '2023-07-1', 2, 'Premature');
 
 -- --------------------------------------------------------
 
@@ -185,7 +185,7 @@ INSERT INTO `mother` (`mother_id`, `name`, `age`, `contact`, `medical_history`, 
 (2, 'Aisha Ali', 29, '+254-798-765-432', 'Diabetes', 'Moderate', 1),
 (3, 'Maryam Hassan', 35, '+254-723-456-789', 'No known conditions', 'Great', 0),
 (4, 'Zulekha Omar', 25, '+254-720-570-231', 'Asthma', 'Good', 1),
-(5, 'Zahra Ahmed', 29, '+254-104-375-512', 'Allergies (Mint)' 1);
+(5, 'Zahra Ahmed', 29, '+254-104-375-512', 'Allergies (Mint)', 1);
 
 -- --------------------------------------------------------
 
