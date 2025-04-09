@@ -40,7 +40,11 @@ CREATE TABLE `antenatalvisit` (
 --
 
 INSERT INTO `antenatalvisit` (`visit_id`, `mother_id`, `visit_date`, `doctor_id`, `notes`) VALUES
-(1, 1, '2024-11-15', 1, 'Routine check-up, blood pressure elevated');
+(1, 1, '2020-06-29', 1, 'Vitals: BP 118/78 mmHg, FHR 142 bpm\r\nComplaints:  Slight fatigue, otherwise well\r\nPhysical Exam: Fundal height 32 cm; fetal position longitudinal, cephalic presentation'),
+(2, 2, '2020-01-30', 2, 'Vitals: BP 118/76 mmHg, HR 82 bpm\r\nComplaints: None\r\nPhysical Exam: Normal fundal height, fetal heart tones audible with Doppler'),
+(3, 3, '2021-05-11', 3, 'Vitals: BP 110/72 mmHg, HR 78 bpm\r\nComplaints: Mild back pain, concern about body changes\r\nPhysical Exam: Uterus palpable at umbilicus, fetal movement reported'),
+(4, 4, '2019-06-21', 4, 'Vitals: BP 108/68 mmHg, HR 92 bpm\r\nComplaints: Fatigue and mild dizziness\r\nPhysical Exam: Pale conjunctiva, otherwise stable'),
+(5, 5, '2021-08-10', 5, 'Vitals: BP 122/78 mmHg, HR 84 bpm, Weight up by 2.5 kg\r\nComplaints: Occasional lower backache\r\nPhysical Exam:  Uterus larger than single gestation; fetal heartbeats heard for both twins. No signs of preterm labour.');
 
 -- --------------------------------------------------------
 
@@ -63,9 +67,9 @@ CREATE TABLE `child` (
 
 INSERT INTO `child` (`child_id`, `name`, `dob`, `mother_id`, `health_records`, `nutrition`) VALUES
 (1, 'Hafsa Mohamed', '2021-01-15', 1, 'Normal Birth Weight\r\nMild flu', 'Exclusive Breastfeeding'),
-(2, 'Hamdi Ahmed', '2020-07-25', 2, 'Normal Birth Weight\r\nMild anemia at 3 months (prescribed iron syrup)', 'Breastfed and formula supplement'),
+(2, 'Hamdi Ahmed', '2020-07-25', 2, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
 (3, 'Ibrahim Abdullahi', '2021-09-15', 3, 'Normal Birth Weight\r\nMild jaundice at birth (resolved)', 'Breastfed + started mashed fruits at 4 months'),
-(4, 'Zainab Omar', '2019-12-19', 4, 'Normal Birth Weight\r\nMinor skin rash at 4 weeks\r\nPreterm, stayed in NICU for 2 weeks', 'Expressed breastmilk via bottle'),
+(4, 'Zainab Omar', '2019-12-19', 4, 'Normal Birth Weight\r\nMild anemia at 3 months (prescribed iron syrup)', 'Breastfed and formula supplement'),
 (5, 'Salma Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed'),
 (6, 'Suleiman Shariff', '2022-02-21', 5, 'Normal Birth Weight\r\nNo complications', 'Breastfed');
 
@@ -112,9 +116,11 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`doctor_id`, `name`, `specialization`, `facility_id`) VALUES
-(1, 'Dr. Smith', 'Obstetrician', 1),
-(2, 'Dr. Elizabeth', 'Gynecologist', 2),
-(3, 'Dr. Maxwell', 'Maternal Fetal Medicine Specialist ', 3);
+(1, 'Dr. Abdullahi', 'Obstetrician', 1),
+(2, 'Dr. Elizabeth', 'Obstetrician', 2),
+(3, 'Dr. Maxwell', 'Gynecologist', 3),
+(4, 'Dr. Smith', 'Obstetrician', 4),
+(5, 'Dr. Sarah', 'Maternal Fetal Medicine Specialist',5);
 
 -- --------------------------------------------------------
 
@@ -190,10 +196,10 @@ CREATE TABLE `mother` (
 
 INSERT INTO `mother` (`mother_id`, `name`, `age`, `contact`, `medical_history`, `nutrition_status`, `high_risk_flag`) VALUES
 (1, 'Mariam Amina', 28, '+254-799-879-645', 'Hypertension', 'Good', 1),
-(2, 'Aisha Ali', 29, '+254-798-765-432', 'Diabetes', 'Moderate', 1),
-(3, 'Maryam Hassan', 35, '+254-723-456-789', 'No known conditions', 'Great', 0),
+(2, 'Aisha Ali', 40, '+254-798-765-432', 'Diabetes', 'Moderate', 1),
+(3, 'Maryam Hassan', 19, '+254-723-456-789', 'No known conditions', 'Great', 0),
 (4, 'Zulekha Omar', 25, '+254-720-570-231', 'Asthma', 'Good', 1),
-(5, 'Zahra Ahmed', 29, '+254-104-375-512', 'Allergies (Mint)', 1);
+(5, 'Zahra Ahmed', 31, '+254-104-375-512', 'Allergies (Mint)', 1);
 
 -- --------------------------------------------------------
 
