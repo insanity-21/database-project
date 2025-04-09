@@ -3,13 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 05, 2025, at 10:33 AM
+-- Generation Time: Apr 09, 2025 at 11:11 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+00:00"; 
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -18,12 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `maternalchildhealthdb`
+-- Database: `maternal2`
 --
 
 -- --------------------------------------------------------
 
----
+--
 -- Table structure for table `antenatalvisit`
 --
 
@@ -84,7 +84,7 @@ CREATE TABLE `deliveryrecord` (
   `mother_id` int(11) DEFAULT NULL,
   `delivery_date` date NOT NULL,
   `hospital_id` int(11) DEFAULT NULL,
-  `birth_type` enum('Normal', 'Caesarean', 'Breech Birth', 'Multiple Birth') NOT NULL
+  `birth_type` enum('Normal','Caesarean','Breech Birth','Multiple Birth') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -120,7 +120,7 @@ INSERT INTO `doctor` (`doctor_id`, `name`, `specialization`, `facility_id`) VALU
 (2, 'Dr. Elizabeth', 'Obstetrician', 2),
 (3, 'Dr. Maxwell', 'Gynecologist', 3),
 (4, 'Dr. Smith', 'Obstetrician', 4),
-(5, 'Dr. Sarah', 'Maternal Fetal Medicine Specialist',5);
+(5, 'Dr. Sarah', 'Maternal Fetal Medicine Specialist', 5);
 
 -- --------------------------------------------------------
 
@@ -144,11 +144,12 @@ INSERT INTO `healthcarefacility` (`hospital_id`, `name`, `location`, `facility_t
 (2, 'Mothers joy', 'Nairobi', 'Hospital'),
 (3, 'Matter Hospital', 'Nairobi', 'Hospital'),
 (4, 'St John', 'Nyeri', 'Hospital'),
-(5, 'Carance', 'Nakuru', 'Clinic'),
-(6, 'BrightCare', 'Lodwar', 'Clinic'),
-(7, 'Serenity', 'Mombasa', 'Health Center'),
-(8, 'PrimeCare', 'Eldoret', 'Health Center'),
+(5, 'Carance', 'Nakuru', ''),
+(6, 'BrightCare', 'Lodwar', ''),
+(7, 'Serenity', 'Mombasa', ''),
+(8, 'PrimeCare', 'Eldoret', ''),
 (9, 'Vital Point Medical', 'Nairobi', 'Hospital');
+
 -- --------------------------------------------------------
 
 --
@@ -298,37 +299,37 @@ ALTER TABLE `nutrition`
 -- AUTO_INCREMENT for table `antenatalvisit`
 --
 ALTER TABLE `antenatalvisit`
-  MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `child`
 --
 ALTER TABLE `child`
-  MODIFY `child_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `child_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `deliveryrecord`
 --
 ALTER TABLE `deliveryrecord`
-  MODIFY `delivery_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `delivery_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `doctor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `healthcarefacility`
 --
 ALTER TABLE `healthcarefacility`
-  MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `hospital_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `immunization`
 --
 ALTER TABLE `immunization`
-  MODIFY `immunization_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `immunization_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `mother`
@@ -340,7 +341,7 @@ ALTER TABLE `mother`
 -- AUTO_INCREMENT for table `nutrition`
 --
 ALTER TABLE `nutrition`
-  MODIFY `nutrition_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `nutrition_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
