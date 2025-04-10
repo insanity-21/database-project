@@ -132,7 +132,7 @@ CREATE TABLE `healthcarefacility` (
   `hospital_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `facility_type` enum('Hospital',' Clinic',' Health Center') NOT NULL
+  `facility_type` enum('Hospital','Clinic','Health Center') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -144,10 +144,10 @@ INSERT INTO `healthcarefacility` (`hospital_id`, `name`, `location`, `facility_t
 (2, 'Mothers joy', 'Nairobi', 'Hospital'),
 (3, 'Matter Hospital', 'Nairobi', 'Hospital'),
 (4, 'St John', 'Nyeri', 'Hospital'),
-(5, 'Carance', 'Nakuru', ''),
-(6, 'BrightCare', 'Lodwar', ''),
-(7, 'Serenity', 'Mombasa', ''),
-(8, 'PrimeCare', 'Eldoret', ''),
+(5, 'Carance', 'Nakuru', 'Clinic'),
+(6, 'BrightCare', 'Lodwar', 'Clinic'),
+(7, 'Serenity', 'Mombasa', 'Health Center'),
+(8, 'PrimeCare', 'Eldoret', 'Health Center'),
 (9, 'Vital Point Medical', 'Nairobi', 'Hospital');
 
 -- --------------------------------------------------------
