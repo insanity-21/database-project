@@ -32,7 +32,8 @@ CREATE TABLE `antenatalvisit` (
   `mother_id` int(11) DEFAULT NULL,
   `visit_date` date NOT NULL,
   `doctor_id` int(11) DEFAULT NULL,
-  `notes` text DEFAULT NULL
+  `notes` text DEFAULT NULL,
+  PRIMARY KEY (`visit_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -58,7 +59,8 @@ CREATE TABLE `child` (
   `dob` date NOT NULL,
   `mother_id` int(11) DEFAULT NULL,
   `health_records` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `nutrition` text DEFAULT NULL
+  `nutrition` text DEFAULT NULL,
+  PRIMARY KEY (`child_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -84,7 +86,8 @@ CREATE TABLE `deliveryrecord` (
   `mother_id` int(11) DEFAULT NULL,
   `delivery_date` date NOT NULL,
   `hospital_id` int(11) DEFAULT NULL,
-  `birth_type` enum('Normal','Caesarean','Breech Birth','Multiple Birth') NOT NULL
+  `birth_type` enum('Normal','Caesarean','Breech Birth','Multiple Birth') NOT NULL,
+  PRIMARY KEY (`delivery_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -108,7 +111,8 @@ CREATE TABLE `doctor` (
   `doctor_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `specialization` varchar(100) DEFAULT NULL,
-  `facility_id` int(11) DEFAULT NULL
+  `facility_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`doctor_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -132,7 +136,8 @@ CREATE TABLE `healthcarefacility` (
   `hospital_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `location` varchar(255) DEFAULT NULL,
-  `facility_type` enum('Hospital','Clinic','Health Center') NOT NULL
+  `facility_type` enum('Hospital','Clinic','Health Center') NOT NULL,
+  PRIMARY KEY (`hospital_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -160,7 +165,8 @@ CREATE TABLE `immunization` (
   `immunization_id` int(11) NOT NULL,
   `child_id` int(11) DEFAULT NULL,
   `vaccine_name` varchar(100) NOT NULL,
-  `immunization_date` date NOT NULL
+  `immunization_date` date NOT NULL,
+  PRIMARY KEY (`immunization_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -188,7 +194,8 @@ CREATE TABLE `mother` (
   `contact` varchar(50) DEFAULT NULL,
   `medical_history` text DEFAULT NULL,
   `nutrition_status` varchar(50) DEFAULT NULL,
-  `high_risk_flag` tinyint(1) DEFAULT 0
+  `high_risk_flag` tinyint(1) DEFAULT 0,
+  PRIMARY KEY (`mother_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -213,7 +220,8 @@ CREATE TABLE `nutrition` (
   `mother_id` int(11) DEFAULT NULL,
   `record_date` date NOT NULL,
   `dietary_intake` text DEFAULT NULL,
-  `supplements` text DEFAULT NULL
+  `supplements` text DEFAULT NULL,
+  PRIMARY KEY (`nutrition_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
