@@ -18,16 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 -- --------------------------------------------------------
 --
--- Database Creation
+-- Database Creation:maternal2
 --
 
 CREATE DATABASE IF NOT EXISTS maternal2;
 USE maternal2;
 
 SET FOREIGN_KEY_CHECKS = 0;
---
--- Database: `maternal2`
---
 
 -- --------------------------------------------------------
 
